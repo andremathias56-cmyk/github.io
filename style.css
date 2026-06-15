@@ -176,15 +176,117 @@ h1 {
     font-size: 0.95rem;
 }
 
+/* Law Enforcement Section Styling */
+.leo-section {
+    padding: 80px 20px;
+    background-color: #0b0c10;
+    border-top: 2px solid #1f2330;
+    text-align: center;
+}
+
+.leo-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.leo-section h2 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.leo-subtitle {
+    color: #a3a6ac;
+    margin-bottom: 45px;
+    font-size: 1.1rem;
+}
+
+.leo-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.leo-card {
+    background: linear-gradient(145deg, #11141d, #090a0d);
+    border: 1px solid #1a2436;
+    border-left: 4px solid #1e56a0; /* Police Blue left accent bar */
+    padding: 40px 30px;
+    border-radius: 8px;
+    width: 450px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.leo-card:hover {
+    transform: translateY(-3px);
+    border-color: #1e56a0;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: #1e56a0;
+    margin-bottom: 20px;
+}
+
+.leo-card h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.leo-card p {
+    color: #a3a6ac;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+    height: 70px; /* Keeps cards perfectly even */
+}
+
+/* LEO Action Buttons */
+.leo-btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 4px;
+    color: #ffffff;
+    transition: background 0.2s ease;
+}
+
+.cad-btn {
+    background-color: #1e56a0;
+}
+
+.cad-btn:hover {
+    background-color: #163f75;
+}
+
+.roster-btn {
+    background-color: #232733;
+    border: 1px solid #383e52;
+}
+
+.roster-btn:hover {
+    background-color: #1b1e28;
+}
+
 /* Smooth Entrance Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Mobile View Optimization */
+/* Mobile View Optimization & Responsiveness */
 @media (max-width: 768px) {
     h1 { font-size: 2.5rem; }
     .button-container { flex-direction: column; width: 100%; max-width: 300px; margin: 0 auto; }
-    .feature-card { width: 100%; }
+    .feature-card, .leo-card { width: 100%; }
+    .leo-card p { height: auto; }
 }
