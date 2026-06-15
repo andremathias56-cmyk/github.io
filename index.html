@@ -21,7 +21,7 @@
             <div class="button-container">
                 <!-- Remember to change 'XXXXXX' to your exact 6-digit Cfx Join Code when you grab it -->
                 <a href="fivem://connect/cfx.re/join/XXXXXX" class="btn play-btn"><i class="fa-solid fa-gamepad"></i> Play Now</a>
-                <a href="https://discord.gg/czrp" target="_blank" class="btn discord-btn"><i class="fa-brands fa-discord"></i> Discord</a>
+                <a href="https://discord.gg/cu2D8WYfbB" target="_blank" class="btn discord-btn"><i class="fa-brands fa-discord"></i> Discord</a>
                 <a href="https://the-district-roleplay-store.tebex.io/" target="_blank" class="btn store-btn"><i class="fa-solid fa-cart-shopping"></i> Store</a>
             </div>
         </div>
@@ -56,7 +56,6 @@
                     <div class="card-icon"><i class="fa-solid fa-terminal"></i></div>
                     <h3>Mainframe CAD System</h3>
                     <p>Access the active computer-aided dispatch database for real-time profiling, active warrants, and incident reporting.</p>
-                    <!-- Replace the # inside href="" with your live CAD web link -->
                     <a href="#" target="_blank" class="leo-btn cad-btn">Launch CAD System</a>
                 </div>
 
@@ -65,13 +64,71 @@
                     <div class="card-icon"><i class="fa-solid fa-users-line"></i></div>
                     <h3>Active Duty Roster</h3>
                     <p>View the official department chain of command, active badge numbers, and current promotional standings.</p>
-                    <!-- Replace the # inside href="" with your live Roster web link -->
                     <a href="#" target="_blank" class="leo-btn roster-btn">View Department Roster</a>
+                </div>
+
+                <!-- NEW Recruitment Card -->
+                <div class="leo-card app-card-trigger">
+                    <div class="card-icon"><i class="fa-solid fa-file-signature"></i></div>
+                    <h3>Recruitment & Staff</h3>
+                    <p>Join the team. Submit your official application for server staff positions, developer roles, or department entries.</p>
+                    <button onclick="toggleApplications()" class="leo-btn app-trigger-btn">Open Applications</button>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- HIDDEN APPLICATION SECTION (Revealed on click) -->
+    <section id="application-portal" class="app-section" style="display: none;">
+        <div class="app-container">
+            <h2>Community Application Portal</h2>
+            <p class="app-subtitle">Select the division you wish to apply for to begin your onboarding process.</p>
+            
+            <div class="app-grid">
+                <!-- Staff Application -->
+                <div class="app-box">
+                    <i class="fa-solid fa-user-shield"></i>
+                    <h3>Server Staff</h3>
+                    <p>Apply to join the moderator and administration team to help maintain community integrity.</p>
+                    <a href="#" target="_blank" class="portal-btn">Apply Now</a>
+                </div>
+
+                <!-- Developer Application -->
+                <div class="app-box">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Development Team</h3>
+                    <p>Looking for skilled individuals experienced in framework optimization, database management, or script integration.</p>
+                    <a href="#" target="_blank" class="portal-btn">Apply Now</a>
+                </div>
+
+                <!-- LEO Application -->
+                <div class="app-box">
+                    <i class="fa-solid fa-handcuffs"></i>
+                    <h3>Law Enforcement</h3>
+                    <p>Enlist in active duty divisions or submit your standard operating procedures application details.</p>
+                    <a href="#" target="_blank" class="portal-btn">Apply Now</a>
+                </div>
+            </div>
+            
+            <button onclick="toggleApplications()" class="close-portal-btn"><i class="fa-solid fa-xmark"></i> Close Portal</button>
+        </div>
+    </section>
+
+    <!-- JavaScript to Handle the Toggle functionality -->
+    <script>
+        function toggleApplications() {
+            const portal = document.getElementById('application-portal');
+            if (portal.style.display === 'none') {
+                portal.style.display = 'block';
+                // Smoothly scroll straight down to the application choices
+                portal.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                portal.style.display = 'none';
+                // Scroll back up to the operations center smoothly
+                document.querySelector('.leo-section').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+
 </body>
-</html>
 </html>
