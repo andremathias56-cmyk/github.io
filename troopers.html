@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SASP Highway Patrol | District Zero RP</title>
+    <title>Patrol Division | San Andreas State Police</title>
     <link rel="stylesheet" href="style.css">
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -12,8 +12,8 @@
 
     <!-- TOP ANNOUNCEMENT BANNER -->
     <div class="announcement-banner">
-        <span>San Andreas State Police - Highway Patrol Division</span>
-        <a href="https://discord.gg/cu2D8WYfbB" target="_blank" class="btn-banner-discord"><i class="fa-brands fa-discord"></i> Join Discord</a>
+        <span>Heads up! This site is under construction!</span>
+        <a href="https://discord.gg/cu2D8WYfbB" target="_blank" class="btn-banner-discord"><i class="fa-brands fa-discord"></i> Join our Discord!</a>
     </div>
 
     <!-- STICKY HEADER & NAVBAR -->
@@ -29,6 +29,14 @@
                     <li><a href="index.html">Home</a></li>
                     
                     <li class="dropdown">
+                        <a href="#">About Us <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#about-section">Command Staff</a></li>
+                            <li><a href="index.html#about-section">History & Mission</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
                         <a href="#" class="active">Divisions <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="troopers.html" class="active">Highway Patrol</a></li>
@@ -42,9 +50,8 @@
                     <li class="dropdown">
                         <a href="#">Resources <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#trooper-operations">CAD / MDC System</a></li>
-                            <li><a href="#trooper-operations">Trooper Roster</a></li>
-                            <li><a href="#trooper-operations">Standard Operating Procedures</a></li>
+                            <li><a href="#leo-operations">CAD / MDC System</a></li>
+                            <li><a href="#leo-operations">Trooper Roster</a></li>
                         </ul>
                     </li>
 
@@ -56,77 +63,83 @@
         </div>
     </header>
 
-    <!-- TROOPER HERO HEADER -->
-    <section class="hero-section" style="height: 50vh; min-height: 350px;">
+    <!-- HERO HEADER SECTION -->
+    <section class="hero-section" style="height: 60vh; min-height: 380px;">
         <div class="hero-overlay">
-            <h1 class="hero-title">Highway Patrol</h1>
-            <p class="hero-motto">"Obedience to the Law is Liberty"</p>
+            <h1 class="hero-title">Patrol Division</h1>
         </div>
     </section>
 
-    <!-- MAIN DIVISION OVERVIEW -->
+    <!-- ABOUT PATROL SECTION -->
     <section class="container about-division-section">
         <div class="two-column">
             <div class="column-text">
-                <h2>Division Overview</h2>
-                <p>The San Andreas State Police Highway Patrol Division serves as the primary law enforcement agency for state highways, freeways, and intercounty traffic corridors across San Andreas.</p>
-                <p>Our Troopers are trained in high-speed pursuit intervention, criminal interdiction, collision investigation, and providing primary or secondary emergency support to local municipal agencies.</p>
+                <h2>About Patrol</h2>
+                <p>The backbone of the San Andreas State Police, our Patrol Division is dedicated to maintaining safety, enforcing laws, and providing swift responses to emergencies. Whether you're cruising through state highways or responding to critical incidents, patrol officers play a vital role in ensuring the community thrives.</p>
             </div>
             <div class="column-image">
-                <img src="trooper-cruiser.png" alt="SASP Trooper Cruiser" onerror="this.src='https://via.placeholder.com/600x350/1e1e1e/ffffff?text=SASP+Trooper+Cruiser'">
+                <img src="trooper-cruiser.png" alt="SASP Patrol Cruiser" onerror="this.src='https://via.placeholder.com/600x350/1e1e1e/ffffff?text=Patrol+Cruiser+Image'">
             </div>
         </div>
     </section>
 
-    <!-- TROOPER RESPONSIBILITIES -->
-    <section class="container features" style="padding-top: 0;">
-        <h2 class="section-title">Trooper Duties</h2>
-        <div class="feature-grid">
-            <div class="feature-card">
-                <i class="fa-solid fa-car-side"></i>
-                <h3>Traffic Enforcement</h3>
-                <p>Maintaining safety across highways through speed enforcement, DUI checkpoints, and proactive traffic stops.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fa-solid fa-route"></i>
-                <h3>State Interdiction</h3>
-                <p>Intercepting illicit narcotics, illegal firearm trafficking, and high-value contraband traveling state routes.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fa-solid fa-handcuffs"></i>
-                <h3>Pursuit Intervention</h3>
-                <p>Executing PIT maneuvers, tire-deflation deployment, and tactical vehicle pursuits safely across state roads.</p>
-            </div>
+    <!-- WHAT WE DO SECTION -->
+    <section class="container features" style="text-align: left; background: none; padding: 40px 20px;">
+        <h2 class="section-title" style="display: block; text-align: center; margin-bottom: 30px;">What We Do</h2>
+        <div style="max-width: 900px; margin: 0 auto; line-height: 1.8; color: var(--text-muted); font-size: 1.05rem;">
+            <ul style="list-style-type: disc; padding-left: 20px;">
+                <li style="margin-bottom: 15px;"><strong style="color: #fff;">Traffic Enforcement:</strong> Ensure road safety by conducting routine traffic stops, handling accidents, and addressing violations.</li>
+                <li style="margin-bottom: 15px;"><strong style="color: #fff;">Emergency Response:</strong> Be the first on the scene to provide assistance during emergencies, crimes in progress, or public disturbances.</li>
+                <li style="margin-bottom: 15px;"><strong style="color: #fff;">Proactive Policing:</strong> Conduct routine patrols, identify potential threats, and build rapport with the community to prevent crime before it happens.</li>
+                <li style="margin-bottom: 15px;"><strong style="color: #fff;">Incident Reporting:</strong> Document incidents thoroughly to ensure accurate records and support further investigations.</li>
+            </ul>
         </div>
     </section>
 
-    <!-- TROOPER OPERATIONS CENTER -->
-    <section id="trooper-operations" class="leo-section">
+    <!-- PATROL CERTIFICATIONS SECTION -->
+    <section class="leo-section" style="background-color: #0d0e12; border-top: 1px solid var(--border-color);">
         <div class="leo-container">
-            <h2>Trooper Operations Center</h2>
-            <p class="leo-subtitle">Dedicated terminal tools, logs, and documentation for active SASP personnel.</p>
+            <h2 style="font-size: 2.8rem; text-transform: uppercase; letter-spacing: 2px;">Patrol Certifications</h2>
+            <p class="leo-subtitle" style="margin-bottom: 35px;"><em>Disclaimer - The following certifications listed are available but not limited to.</em></p>
             
-            <div class="leo-grid">
-                <div class="leo-card">
-                    <div class="card-icon"><i class="fa-solid fa-terminal"></i></div>
-                    <h3>State CAD / MDC</h3>
-                    <p>Access active dispatching, run vehicle registration checks, and log arrest reports.</p>
-                    <a href="#" target="_blank" class="leo-btn cad-btn">Open MDC Terminal</a>
+            <div class="leo-grid" style="align-items: stretch;">
+                
+                <!-- Cert 1 -->
+                <div class="leo-card" style="width: 320px; border-left: none; border-top: 4px solid var(--sasp-blue, #0055ff);">
+                    <img src="trooper-cruiser.png" alt="POST Standard" style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; margin-bottom: 15px;" onerror="this.src='https://via.placeholder.com/300x160/1a2436/ffffff?text=Certification+1'">
+                    <h3 style="font-size: 1.2rem; text-align: center;">State Officer Standards and Training (POST)</h3>
+                    <p style="font-size: 0.88rem; height: auto;">This certification is mandatory for all full-time law enforcement officers. It encompasses comprehensive training in laws, legal procedures, defensive tactics, firearms proficiency, and community policing.</p>
                 </div>
 
-                <div class="leo-card">
-                    <div class="card-icon"><i class="fa-solid fa-users-line"></i></div>
-                    <h3>Active SASP Roster</h3>
-                    <p>Review current command structure, unit callsigns, badge numbers, and active certifications.</p>
-                    <a href="#" target="_blank" class="leo-btn roster-btn">View Roster</a>
+                <!-- Cert 2 -->
+                <div class="leo-card" style="width: 320px; border-left: none; border-top: 4px solid var(--sasp-blue, #0055ff);">
+                    <img src="trooper-cruiser.png" alt="FTO Program" style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; margin-bottom: 15px;" onerror="this.src='https://via.placeholder.com/300x160/1a2436/ffffff?text=Certification+2'">
+                    <h3 style="font-size: 1.2rem; text-align: center;">Field Training Officer (FTO) Program</h3>
+                    <p style="font-size: 0.88rem; height: auto;">The Field Training Officer Program is an intensive, hands-on training process designed to bridge the gap between academy learning and real-world policing.</p>
                 </div>
 
-                <div class="leo-card app-card-trigger">
-                    <div class="card-icon"><i class="fa-solid fa-file-signature"></i></div>
-                    <h3>Cadet Academy Enlistment</h3>
-                    <p>Interested in joining the rank and file? Apply for the next incoming SASP Academy class.</p>
-                    <a href="index.html#application-portal" class="leo-btn app-trigger-btn">Apply Today</a>
+                <!-- Cert 3 -->
+                <div class="leo-card" style="width: 320px; border-left: none; border-top: 4px solid var(--sasp-blue, #0055ff);">
+                    <img src="trooper-cruiser.png" alt="Traffic Unit" style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; margin-bottom: 15px;" onerror="this.src='https://via.placeholder.com/300x160/1a2436/ffffff?text=Certification+3'">
+                    <h3 style="font-size: 1.2rem; text-align: center;">Traffic Unit (SASP-TU)</h3>
+                    <p style="font-size: 0.88rem; height: auto;">The Traffic Unit assembles highly trained and skilled automobile and motorbike operators to monitor traffic issues across the state.</p>
                 </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- JOIN PATROL CALLOUT -->
+    <section class="container" style="text-align: center; margin: 60px auto;">
+        <div class="two-column" style="align-items: center;">
+            <div class="column-image">
+                <img src="logo.png" alt="SASP Seal" style="max-width: 250px; margin: 0 auto; display: block; border: none; box-shadow: none;">
+            </div>
+            <div class="column-text" style="text-align: left;">
+                <h2>Join the Patrol Division</h2>
+                <p>Patrol is the starting point for all SASP members. Here you'll develop foundational skills, gain valuable experience, and contribute directly to the safety and immersion of the server. Are you ready to hit the streets and make an impact?</p>
+                <p>Apply today and start your journey with the San Andreas State Police!</p>
+                <a href="index.html#application-portal" class="btn play-btn" style="margin-top: 10px; display: inline-block;"><i class="fa-solid fa-file-signature"></i> Apply Now</a>
             </div>
         </div>
     </section>
@@ -135,6 +148,7 @@
     <footer class="site-footer">
         <div class="footer-content">
             <p>&copy; 2026 District Zero RP | San Andreas State Police. All Rights Reserved.</p>
+            <p style="font-size: 0.75rem; margin-top: 10px; color: #666;">*Disclaimer - District Zero RP is a roleplay community for FiveM. We have no connections or affiliation with real-world state or municipal government entities.</p>
         </div>
     </footer>
 
