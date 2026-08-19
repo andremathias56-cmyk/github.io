@@ -3,86 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>District Zero RP | Home</title>
+    <title>District Zero RP | San Andreas State Police</title>
     <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome for clean gaming icons -->
+    <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Main Header / Hero Section -->
-    <header class="hero-section">
-        <div class="hero-content">
-            <img src="logo.png" alt="Server Logo" class="server-logo">
-            <h1>DISTRICT ZERO RP</h1>
-            <p>Experience a High-Energy, Tactical Roleplay Community</p>
+    <!-- TOP ANNOUNCEMENT BANNER -->
+    <div class="announcement-banner">
+        <span>Heads up! This site is under construction!</span>
+        <a href="https://discord.gg/cu2D8WYfbB" target="_blank" class="btn-banner-discord"><i class="fa-brands fa-discord"></i> Join our Discord!</a>
+    </div>
+
+    <!-- STICKY HEADER & NAVBAR WITH DROPDOWNS -->
+    <header class="navbar-header">
+        <div class="nav-container">
+            <a href="#" class="brand-logo">
+                <img src="logo.png" alt="SASP Seal" class="nav-logo">
+                <span class="brand-name">San Andreas State Police</span>
+            </a>
             
-            <!-- The Core Navigation Buttons -->
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    
+                    <li class="dropdown">
+                        <a href="#">About Us <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#about-section">Command Staff</a></li>
+                            <li><a href="#about-section">History & Mission</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">Divisions <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#patrol-division">Highway Patrol</a></li>
+                            <li><a href="#divisions">Tactical Response (SRT)</a></li>
+                            <li><a href="#divisions">Commercial Vehicle Enforcement</a></li>
+                            <li><a href="#divisions">K-9 Unit</a></li>
+                            <li><a href="#divisions">Air Support Division</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">Resources <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#leo-operations">CAD / MDC System</a></li>
+                            <li><a href="#leo-operations">Trooper Roster</a></li>
+                            <li><a href="#application-portal">Standard Operating Procedures</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="javascript:void(0)" onclick="toggleApplications()">Careers</a></li>
+                    <li><a href="https://discord.gg/cu2D8WYfbB" target="_blank">Join our Discord!</a></li>
+                    <li><a href="fivem://connect/cfx.re/join/XXXXXX" class="fly-in-link"><i class="fa-solid fa-plane"></i> Fly in!</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-overlay">
+            <h1 class="hero-title">San Andreas State Police</h1>
+            <p class="hero-motto">"Obedience to the Law is Liberty"</p>
+            
+            <!-- Quick Actions -->
             <div class="button-container">
-                <!-- Remember to change 'XXXXXX' to your exact 6-digit Cfx Join Code when you grab it -->
                 <a href="fivem://connect/cfx.re/join/XXXXXX" class="btn play-btn"><i class="fa-solid fa-gamepad"></i> Play Now</a>
                 <a href="https://discord.gg/cu2D8WYfbB" target="_blank" class="btn discord-btn"><i class="fa-brands fa-discord"></i> Discord</a>
                 <a href="https://the-district-roleplay-store.tebex.io/" target="_blank" class="btn store-btn"><i class="fa-solid fa-cart-shopping"></i> Store</a>
             </div>
         </div>
-    </header>
+    </section>
 
-    <!-- Server Features Section -->
-    <section class="features">
-        <h2>Why Join Us?</h2>
-        <div class="feature-grid">
-            <div class="feature-card">
-                <i class="fa-solid fa-bolt"></i>
-                <h3>High Energy & Tactical</h3>
-                <p>Fully optimized competitive and tactical loops built for continuous action.</p>
+    <!-- DIVISION DETAIL (HIGHWAY PATROL SECTION) -->
+    <section id="patrol-division" class="container about-division-section">
+        <div class="two-column">
+            <div class="column-text">
+                <h2>About Highway Patrol</h2>
+                <p>The premier law enforcement agency of the state, the San Andreas State Police Highway Patrol Division is responsible for regulating traffic, enforcing state statutes, and providing critical emergency support across all highways and rural corridors.</p>
+                <p>Whether conducting high-speed interdictions, state-wide tactical pursuits, or assisting local municipal jurisdictions, State Troopers uphold the highest standard of professionalism across San Andreas.</p>
             </div>
-            <div class="feature-card">
-                <i class="fa-solid fa-shield-halved"></i>
-                <h3>Dedicated Departments</h3>
-                <p>Featuring custom law enforcement scripting and an advanced Department of Corrections loop.</p>
+            <div class="column-image">
+                <!-- Replace with your State Trooper vehicle screenshot path -->
+                <img src="trooper-cruiser.png" alt="San Andreas Trooper Cruiser" onerror="this.src='https://via.placeholder.com/600x350/1e1e1e/ffffff?text=SASP+Trooper+Cruiser'">
             </div>
         </div>
     </section>
 
-    <!-- Law Enforcement Operations Section -->
-    <section class="leo-section">
+    <!-- "WHAT WE DO" GRID SECTION -->
+    <section id="divisions" class="container features">
+        <h2 class="section-title">What We Do</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Highway Interdiction</h3>
+                <p>Patrolling state highways and freeways to manage traffic flow, conduct interdictions, and reduce motor vehicle fatalities.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-crosshairs"></i>
+                <h3>Tactical Operations</h3>
+                <p>Deploying specialized tactics and high-risk response units for barricaded suspects, warrant executions, and state crises.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-truck-monster"></i>
+                <h3>Commercial Enforcement</h3>
+                <p>Inspecting commercial transport vehicles to ensure safety compliance and prevent contraband trafficking across county lines.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-file-shield"></i>
+                <h3>State Investigation</h3>
+                <p>Assisting local law enforcement with high-level criminal investigations, officer-involved incidents, and major reconstruction.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEO OPERATIONS CENTER -->
+    <section id="leo-operations" class="leo-section">
         <div class="leo-container">
             <h2>Department Operations</h2>
-            <p class="leo-subtitle">Official resources and tools for District Zero Law Enforcement personnel.</p>
+            <p class="leo-subtitle">Official resources and terminal tools for San Andreas State Troopers.</p>
             
             <div class="leo-grid">
                 <!-- CAD System Card -->
                 <div class="leo-card">
                     <div class="card-icon"><i class="fa-solid fa-terminal"></i></div>
-                    <h3>Mainframe CAD System</h3>
-                    <p>Access the active computer-aided dispatch database for real-time profiling, active warrants, and incident reporting.</p>
-                    <a href="#" target="_blank" class="leo-btn cad-btn">Launch CAD System</a>
+                    <h3>State CAD / MDC System</h3>
+                    <p>Access the active state database for real-time criminal history profiling, active warrants, and citation filing.</p>
+                    <a href="#" target="_blank" class="leo-btn cad-btn">Launch State CAD</a>
                 </div>
 
                 <!-- Roster Card -->
                 <div class="leo-card">
                     <div class="card-icon"><i class="fa-solid fa-users-line"></i></div>
-                    <h3>Active Duty Roster</h3>
-                    <p>View the official department chain of command, active badge numbers, and current promotional standings.</p>
-                    <a href="#" target="_blank" class="leo-btn roster-btn">View Department Roster</a>
+                    <h3>Trooper Roster</h3>
+                    <p>View official command structure, callsign assignments, active badge numbers, and promotional standings.</p>
+                    <a href="#" target="_blank" class="leo-btn roster-btn">View Trooper Roster</a>
                 </div>
 
-                <!-- NEW Recruitment Card -->
+                <!-- Recruitment Card -->
                 <div class="leo-card app-card-trigger">
                     <div class="card-icon"><i class="fa-solid fa-file-signature"></i></div>
-                    <h3>Recruitment & Staff</h3>
-                    <p>Join the team. Submit your official application for server staff positions, developer roles, or department entries.</p>
-                    <button onclick="toggleApplications()" class="leo-btn app-trigger-btn">Open Applications</button>
+                    <h3>Recruitment & Enlistment</h3>
+                    <p>Enlist in active duty divisions or submit your application for state Trooper academy training.</p>
+                    <button onclick="toggleApplications()" class="leo-btn app-trigger-btn">Open Recruitment</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- HIDDEN APPLICATION SECTION (Revealed on click) -->
+    <!-- HIDDEN APPLICATION PORTAL (REVEALED ON CLICK) -->
     <section id="application-portal" class="app-section" style="display: none;">
         <div class="app-container">
             <h2>Community Application Portal</h2>
-            <p class="app-subtitle">Select the division you wish to apply for to begin your onboarding process.</p>
+            <p class="app-subtitle">Select the division or branch you wish to apply for to begin your process.</p>
             
             <div class="app-grid">
                 <!-- Staff Application -->
@@ -101,11 +178,11 @@
                     <a href="#" target="_blank" class="portal-btn">Apply Now</a>
                 </div>
 
-                <!-- LEO Application -->
+                <!-- SASP Trooper Application -->
                 <div class="app-box">
                     <i class="fa-solid fa-handcuffs"></i>
-                    <h3>Law Enforcement</h3>
-                    <p>Enlist in active duty divisions or submit your standard operating procedures application details.</p>
+                    <h3>State Trooper Academy</h3>
+                    <p>Enlist into the San Andreas State Police active duty academy or transfer divisions.</p>
                     <a href="#" target="_blank" class="portal-btn">Apply Now</a>
                 </div>
             </div>
@@ -114,21 +191,25 @@
         </div>
     </section>
 
-    <!-- JavaScript to Handle the Toggle functionality -->
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 District Zero RP | San Andreas State Police. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JS TOGGLE SCRIPT -->
     <script>
         function toggleApplications() {
             const portal = document.getElementById('application-portal');
-            if (portal.style.display === 'none') {
+            if (portal.style.display === 'none' || portal.style.display === '') {
                 portal.style.display = 'block';
-                // Smoothly scroll straight down to the application choices
                 portal.scrollIntoView({ behavior: 'smooth' });
             } else {
                 portal.style.display = 'none';
-                // Scroll back up to the operations center smoothly
-                document.querySelector('.leo-section').scrollIntoView({ behavior: 'smooth' });
+                document.querySelector('#leo-operations').scrollIntoView({ behavior: 'smooth' });
             }
         }
     </script>
-
 </body>
 </html>
