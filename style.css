@@ -6,51 +6,208 @@
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
+:root {
+    --bg-dark: #0d0e12;
+    --bg-card: #14161d;
+    --sasp-blue: #1e56a0;
+    --sasp-blue-hover: #163f75;
+    --sasp-gold: #d4af37;
+    --border-color: #232733;
+    --text-muted: #a3a6ac;
+}
+
 body {
-    background-color: #0d0e12;
+    background-color: var(--bg-dark);
     color: #eeeeee;
     overflow-x: hidden;
 }
 
-/* Hero Section Styling */
+/* ==========================================
+   TOP ANNOUNCEMENT BANNER
+   ========================================== */
+.announcement-banner {
+    background-color: #11141d;
+    color: #ffffff;
+    text-align: center;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-banner-discord {
+    background-color: #5865F2;
+    color: #ffffff;
+    padding: 3px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: background 0.2s ease;
+}
+
+.btn-banner-discord:hover {
+    background-color: #4752C4;
+}
+
+/* ==========================================
+   STICKY HEADER & NAVIGATION BAR
+   ========================================== */
+.navbar-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(13, 14, 18, 0.95);
+    border-bottom: 1px solid var(--border-color);
+    backdrop-filter: blur(8px);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.nav-logo {
+    height: 42px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #eeeeee;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 8px 10px;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover, 
+.nav-links a.active {
+    color: var(--sasp-blue);
+}
+
+.fly-in-link {
+    background: var(--sasp-blue);
+    padding: 6px 14px !important;
+    border-radius: 4px;
+    font-weight: 600 !important;
+}
+
+.fly-in-link:hover {
+    background: var(--sasp-blue-hover);
+    color: #fff !important;
+}
+
+.nav-arrow {
+    font-size: 0.75rem;
+    margin-left: 3px;
+}
+
+/* ==========================================
+   DROPDOWN MENUS
+   ========================================== */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--bg-card);
+    min-width: 220px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    list-style: none;
+    padding: 8px 0;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.dropdown-menu li a:hover {
+    background-color: #1b1e28;
+    color: #ffffff;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* ==========================================
+   HERO SECTION STYLING
+   ========================================== */
 .hero-section {
-    height: 85vh;
+    height: 75vh;
+    min-height: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 20px;
-    background: linear-gradient(135deg, rgba(13, 14, 18, 0.95) 30%, rgba(30, 15, 50, 0.8)), url('background.jpg') no-repeat center center/cover;
-    border-bottom: 3px solid #6a0dad;
+    background: linear-gradient(135deg, rgba(13, 14, 18, 0.92) 30%, rgba(10, 25, 50, 0.85)), url('background.jpg') no-repeat center center/cover;
+    border-bottom: 3px solid var(--sasp-blue);
 }
 
-.hero-content {
+.hero-overlay {
     max-width: 800px;
     animation: fadeIn 1s ease-in-out;
 }
 
-/* Logo & Headers */
 .server-logo {
-    max-width: 160px;
+    max-width: 150px;
     height: auto;
     margin-bottom: 15px;
-    filter: drop-shadow(0px 0px 10px rgba(106, 13, 173, 0.5));
+    filter: drop-shadow(0px 0px 10px rgba(30, 86, 160, 0.5));
 }
 
-h1 {
+.hero-title {
     font-size: 3.5rem;
     font-weight: 800;
     letter-spacing: 2px;
     color: #ffffff;
     text-shadow: 0px 4px 12px rgba(0,0,0,0.6);
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
 }
 
-.hero-content p {
-    font-size: 1.25rem;
-    color: #b9bbbe;
-    margin-bottom: 35px;
-    font-weight: 400;
+.hero-motto {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--sasp-gold);
+    margin-bottom: 30px;
+    font-weight: 500;
 }
 
 /* Enhanced Gaming Buttons */
@@ -80,13 +237,13 @@ h1 {
 }
 
 .play-btn {
-    background: linear-gradient(135deg, #8a2be2, #4a0082);
-    border: 1px solid #a040ff;
+    background: linear-gradient(135deg, var(--sasp-blue), var(--sasp-blue-hover));
+    border: 1px solid #3b73b9;
 }
 .play-btn:hover {
-    background: linear-gradient(135deg, #a040ff, #5c00a3);
+    background: linear-gradient(135deg, #2b61aa, #133360);
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(138, 43, 226, 0.5);
+    box-shadow: 0 6px 20px rgba(30, 86, 160, 0.5);
 }
 
 .discord-btn {
@@ -107,14 +264,56 @@ h1 {
     box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
 }
 
-/* Features Section Styling */
+/* ==========================================
+   TWO COLUMN ABOUT SECTION (HIGHWAY PATROL)
+   ========================================== */
+.container {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.about-division-section {
+    padding: 60px 20px;
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.column-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--sasp-blue);
+    padding-left: 12px;
+}
+
+.column-text p {
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.column-image img {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+/* ==========================================
+   FEATURES & "WHAT WE DO" GRID
+   ========================================== */
 .features {
     padding: 80px 20px;
     text-align: center;
     background-color: #090a0d;
 }
 
-.features h2 {
+.features h2, .section-title {
     font-size: 2.2rem;
     margin-bottom: 45px;
     position: relative;
@@ -122,12 +321,12 @@ h1 {
     letter-spacing: 1px;
 }
 
-.features h2::after {
+.features h2::after, .section-title::after {
     content: '';
     position: absolute;
     width: 60%;
     height: 4px;
-    background-color: #8a2be2;
+    background-color: var(--sasp-blue);
     bottom: -10px;
     left: 20%;
     border-radius: 2px;
@@ -143,23 +342,24 @@ h1 {
 }
 
 .feature-card {
-    background-color: #14161d;
-    border: 1px solid #232733;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
     padding: 40px 30px;
     border-radius: 10px;
-    width: 340px;
+    width: 240px;
+    flex-grow: 1;
     text-align: left;
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .feature-card:hover {
     transform: translateY(-5px);
-    border-color: #8a2be2;
+    border-color: var(--sasp-blue);
 }
 
 .feature-card i {
     font-size: 2.5rem;
-    color: #8a2be2;
+    color: var(--sasp-blue);
     margin-bottom: 20px;
     display: block;
 }
@@ -171,16 +371,18 @@ h1 {
 }
 
 .feature-card p {
-    color: #a3a6ac;
+    color: var(--text-muted);
     line-height: 1.6;
     font-size: 0.95rem;
 }
 
-/* Law Enforcement Section Styling */
+/* ==========================================
+   LAW ENFORCEMENT OPERATIONS STYLING
+   ========================================== */
 .leo-section {
     padding: 80px 20px;
     background-color: #0b0c10;
-    border-top: 2px solid #1f2330;
+    border-top: 2px solid var(--border-color);
     text-align: center;
 }
 
@@ -197,7 +399,7 @@ h1 {
 }
 
 .leo-subtitle {
-    color: #a3a6ac;
+    color: var(--text-muted);
     margin-bottom: 45px;
     font-size: 1.1rem;
 }
@@ -212,10 +414,10 @@ h1 {
 .leo-card {
     background: linear-gradient(145deg, #11141d, #090a0d);
     border: 1px solid #1a2436;
-    border-left: 4px solid #1e56a0; /* Police Blue left accent bar */
+    border-left: 4px solid var(--sasp-blue);
     padding: 40px 30px;
     border-radius: 8px;
-    width: 340px; /* Reduced to balance cleanly across 3 column panels */
+    width: 320px;
     text-align: left;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     transition: transform 0.2s ease, border-color 0.2s ease;
@@ -223,23 +425,22 @@ h1 {
 
 .leo-card:hover {
     transform: translateY(-3px);
-    border-color: #1e56a0;
+    border-color: var(--sasp-blue);
 }
 
-/* Color tweak for the custom third recruitment card */
 .app-card-trigger {
-    border-left: 4px solid #8a2be2;
+    border-left: 4px solid var(--sasp-gold);
 }
 .app-card-trigger:hover {
-    border-color: #8a2be2;
+    border-color: var(--sasp-gold);
 }
 .app-card-trigger .card-icon {
-    color: #8a2be2;
+    color: var(--sasp-gold);
 }
 
 .card-icon {
     font-size: 2.5rem;
-    color: #1e56a0;
+    color: var(--sasp-blue);
     margin-bottom: 20px;
 }
 
@@ -251,11 +452,11 @@ h1 {
 }
 
 .leo-card p {
-    color: #a3a6ac;
+    color: var(--text-muted);
     line-height: 1.6;
     font-size: 0.95rem;
     margin-bottom: 30px;
-    height: 75px; /* Keeps cards perfectly even */
+    height: 75px;
 }
 
 /* LEO Action Buttons */
@@ -273,10 +474,10 @@ h1 {
 }
 
 .cad-btn {
-    background-color: #1e56a0;
+    background-color: var(--sasp-blue);
 }
 .cad-btn:hover {
-    background-color: #163f75;
+    background-color: var(--sasp-blue-hover);
 }
 
 .roster-btn {
@@ -288,18 +489,21 @@ h1 {
 }
 
 .app-trigger-btn {
-    background-color: #8a2be2;
+    background-color: var(--sasp-gold);
+    color: #0d0e12;
     cursor: pointer;
 }
 .app-trigger-btn:hover {
-    background-color: #7020c4;
+    background-color: #b89528;
 }
 
-/* Dynamic Application Portal Panel Styling */
+/* ==========================================
+   DYNAMIC APPLICATION PORTAL PANEL STYLING
+   ========================================== */
 .app-section {
     padding: 80px 20px;
     background-color: #090a0d;
-    border-top: 3px solid #8a2be2;
+    border-top: 3px solid var(--sasp-blue);
     text-align: center;
     animation: fadeIn 0.4s ease-in-out;
 }
@@ -331,8 +535,8 @@ h1 {
 }
 
 .app-box {
-    background-color: #14161d;
-    border: 1px solid #232733;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
     padding: 35px 25px;
     border-radius: 8px;
     width: 320px;
@@ -342,12 +546,12 @@ h1 {
 
 .app-box:hover {
     transform: translateY(-4px);
-    border-color: #8a2be2;
+    border-color: var(--sasp-blue);
 }
 
 .app-box i {
     font-size: 2.2rem;
-    color: #8a2be2;
+    color: var(--sasp-gold);
     margin-bottom: 15px;
 }
 
@@ -358,7 +562,7 @@ h1 {
 }
 
 .app-box p {
-    color: #a3a6ac;
+    color: var(--text-muted);
     font-size: 0.9rem;
     line-height: 1.5;
     margin-bottom: 25px;
@@ -379,8 +583,8 @@ h1 {
 }
 
 .portal-btn:hover {
-    background-color: #8a2be2;
-    border-color: #a040ff;
+    background-color: var(--sasp-blue);
+    border-color: #3b73b9;
 }
 
 .close-portal-btn {
@@ -399,16 +603,32 @@ h1 {
     color: #ffffff;
 }
 
-/* Smooth Entrance Animations */
+/* ==========================================
+   FOOTER STYLING
+   ========================================== */
+.site-footer {
+    background-color: #060709;
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* ==========================================
+   ANIMATIONS & RESPONSIVENESS
+   ========================================== */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Mobile View Optimization & Full Responsiveness */
 @media (max-width: 768px) {
-    h1 { font-size: 2.5rem; }
+    .two-column { grid-template-columns: 1fr; }
+    .hero-title { font-size: 2.3rem; }
+    .nav-links { display: none; }
     .button-container { flex-direction: column; width: 100%; max-width: 300px; margin: 0 auto; }
     .feature-card, .leo-card, .app-box { width: 100%; }
     .leo-card p, .app-box p { height: auto; }
+}
 }
