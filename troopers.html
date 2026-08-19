@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASP Highway Patrol | District Zero RP</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- TOP ANNOUNCEMENT BANNER -->
+    <div class="announcement-banner">
+        <span>San Andreas State Police - Highway Patrol Division</span>
+        <a href="https://discord.gg/cu2D8WYfbB" target="_blank" class="btn-banner-discord"><i class="fa-brands fa-discord"></i> Join Discord</a>
+    </div>
+
+    <!-- STICKY HEADER & NAVBAR -->
+    <header class="navbar-header">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="logo.png" alt="SASP Seal" class="nav-logo">
+                <span class="brand-name">San Andreas State Police</span>
+            </a>
+            
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    
+                    <li class="dropdown">
+                        <a href="#" class="active">Divisions <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="troopers.html" class="active">Highway Patrol</a></li>
+                            <li><a href="srt.html">Tactical Response (SRT)</a></li>
+                            <li><a href="cve.html">Commercial Vehicle Enforcement</a></li>
+                            <li><a href="k9.html">K-9 Unit</a></li>
+                            <li><a href="air-support.html">Air Support Division</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">Resources <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#trooper-operations">CAD / MDC System</a></li>
+                            <li><a href="#trooper-operations">Trooper Roster</a></li>
+                            <li><a href="#trooper-operations">Standard Operating Procedures</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="index.html#application-portal">Careers</a></li>
+                    <li><a href="https://discord.gg/cu2D8WYfbB" target="_blank">Join our Discord!</a></li>
+                    <li><a href="fivem://connect/cfx.re/join/XXXXXX" class="fly-in-link"><i class="fa-solid fa-plane"></i> Fly in!</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- TROOPER HERO HEADER -->
+    <section class="hero-section" style="height: 50vh; min-height: 350px;">
+        <div class="hero-overlay">
+            <h1 class="hero-title">Highway Patrol</h1>
+            <p class="hero-motto">"Obedience to the Law is Liberty"</p>
+        </div>
+    </section>
+
+    <!-- MAIN DIVISION OVERVIEW -->
+    <section class="container about-division-section">
+        <div class="two-column">
+            <div class="column-text">
+                <h2>Division Overview</h2>
+                <p>The San Andreas State Police Highway Patrol Division serves as the primary law enforcement agency for state highways, freeways, and intercounty traffic corridors across San Andreas.</p>
+                <p>Our Troopers are trained in high-speed pursuit intervention, criminal interdiction, collision investigation, and providing primary or secondary emergency support to local municipal agencies.</p>
+            </div>
+            <div class="column-image">
+                <img src="trooper-cruiser.png" alt="SASP Trooper Cruiser" onerror="this.src='https://via.placeholder.com/600x350/1e1e1e/ffffff?text=SASP+Trooper+Cruiser'">
+            </div>
+        </div>
+    </section>
+
+    <!-- TROOPER RESPONSIBILITIES -->
+    <section class="container features" style="padding-top: 0;">
+        <h2 class="section-title">Trooper Duties</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <i class="fa-solid fa-car-side"></i>
+                <h3>Traffic Enforcement</h3>
+                <p>Maintaining safety across highways through speed enforcement, DUI checkpoints, and proactive traffic stops.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-route"></i>
+                <h3>State Interdiction</h3>
+                <p>Intercepting illicit narcotics, illegal firearm trafficking, and high-value contraband traveling state routes.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-handcuffs"></i>
+                <h3>Pursuit Intervention</h3>
+                <p>Executing PIT maneuvers, tire-deflation deployment, and tactical vehicle pursuits safely across state roads.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TROOPER OPERATIONS CENTER -->
+    <section id="trooper-operations" class="leo-section">
+        <div class="leo-container">
+            <h2>Trooper Operations Center</h2>
+            <p class="leo-subtitle">Dedicated terminal tools, logs, and documentation for active SASP personnel.</p>
+            
+            <div class="leo-grid">
+                <div class="leo-card">
+                    <div class="card-icon"><i class="fa-solid fa-terminal"></i></div>
+                    <h3>State CAD / MDC</h3>
+                    <p>Access active dispatching, run vehicle registration checks, and log arrest reports.</p>
+                    <a href="#" target="_blank" class="leo-btn cad-btn">Open MDC Terminal</a>
+                </div>
+
+                <div class="leo-card">
+                    <div class="card-icon"><i class="fa-solid fa-users-line"></i></div>
+                    <h3>Active SASP Roster</h3>
+                    <p>Review current command structure, unit callsigns, badge numbers, and active certifications.</p>
+                    <a href="#" target="_blank" class="leo-btn roster-btn">View Roster</a>
+                </div>
+
+                <div class="leo-card app-card-trigger">
+                    <div class="card-icon"><i class="fa-solid fa-file-signature"></i></div>
+                    <h3>Cadet Academy Enlistment</h3>
+                    <p>Interested in joining the rank and file? Apply for the next incoming SASP Academy class.</p>
+                    <a href="index.html#application-portal" class="leo-btn app-trigger-btn">Apply Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 District Zero RP | San Andreas State Police. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
